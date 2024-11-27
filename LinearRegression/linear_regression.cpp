@@ -1,12 +1,6 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
-#include <map>
-/*
-
-y = slope * x + b
-
-*/
 
 class Model 
 {
@@ -49,21 +43,21 @@ public:
 	void linearRegression()
 	{
 
-		// Reta: y = A + Bx
+		// Line equation: y = Bx + A
 
 		double n = mData.first.size();
 
-		std::vector<double> x = mData.first; // input
-		std::vector<double> y = mData.second;
+		std::vector<double> x = mData.first;  // input
+		std::vector<double> y = mData.second; // output
 
-		// x times y vector 
+		// x * y vector 
 		std::vector<double> x_y;
 		for (size_t i = 0; i < n; i++)
 		{
 			x_y.push_back(x[i] * y[i]);
 		}
 
-		// x^2
+		// x^2 vector
 		std::vector<double> x_2;
 		for (size_t i = 0; i < n; i++)
 		{
